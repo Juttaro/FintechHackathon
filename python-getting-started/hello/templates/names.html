@@ -1,0 +1,65 @@
+{% extends "base.html" %} {% block content %}
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8" />
+    <script src="jquery-1.12.4.min.js"></script>
+    <title>Names</title>
+    <script>
+        $(document).ready(function() {
+
+            $('#btn-add').click(function() {
+                $('#select-from option:selected').each(function() {
+                    $('#select-to').append("<option value='" + $(this).val() + "'>" + $(this).text() + "</option>");
+                    $(this).remove();
+                });
+            });
+            $('#btn-remove').click(function() {
+                $('#select-to option:selected').each(function() {
+                    $('#select-from').append("<option value='" + $(this).val() + "'>" + $(this).text() + "</option>");
+                    $(this).remove();
+                });
+            });
+
+        });
+    </script>
+</head>
+
+<body style = "
+background: #ff6e7f; /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #ff6e7f , #bfe9ff); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #ff6e7f , #bfe9ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+">
+    <h3 style="text-align: center; font-family: monospace; font-weight: bolder">Add and Delete Features for the Admin to Manually update Flagged Emails for Clarity.</h3>
+    <fieldset>
+        <select name="selectfrom" id="select-from" multiple size="20" style="margin-left: 150px; width:400px; text-align: center; font-size: 20px; font-family: monospace;"
+        <option value= "0">wabrams1@me.com</option>
+        <option value="1">john.podesta@gmail.com</option>
+        <option value="2">davidckamin@gmail.com</option>
+        <option value="3">verizonwireless2@email.vzwshop.com</option>
+        <option value="4">donnamorelli01@comcast.net</option>
+        <option>ebraverman@clintonfoundation.org</option>
+        <option><Tina@presidentclinton.com</option>
+        <option>huma@clintonemail.com</option>
+        <option>bari@chelseaoffice.com</option>
+        <option>hannah@presidentclinton.com</option>
+        <option>zshaikley@clintonfoundation.org</option>
+        <option>esepp@americanprogress.org</option>
+   </select>
+
+        <a href="JavaScript:void(0);" id="btn-add" style="text-align:center; color: black; font-size: 30px;">FLAG! &raquo;</a>
+        <a href="JavaScript:void(0);" id="btn-remove" style="text-align:center; color: black; font-size: 30px;">&laquo; REMOVE</a>
+
+        <select name="selectto" id="select-to" multiple size="20" style="width:400px; text-align: center; font-size: 20px; font-family: monospace;">
+         <option value="5">Benjamin_J._Rhodes@who.eop.gov</option>
+         <option value="6">DMCOS@who.eop.gov</option>
+         <option value="7">relappalachia@cna.org</option>
+            <option>lhuber@albrightstonebridge.com></option>
+   </select>
+    </fieldset>
+    </form>
+</body>
+
+</html>
+{% endblock %}

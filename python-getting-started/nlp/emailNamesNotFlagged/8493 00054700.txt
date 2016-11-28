@@ -1,0 +1,6 @@
+Podesta
+McCain
+John
+Kirkpatrick
+Ann
+Kirk\xc2\xadpatrick

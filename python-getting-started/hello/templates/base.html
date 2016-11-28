@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>KEN's FLAGGER</title>
+    <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:600" rel="stylesheet">
+    <style type="text/css">
+        .jumbotron {
+            background-image: url(http://emailmarketinglogic.com/wp-content/uploads/2015/04/email-marketing-1024x768.jpg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            padding-bottom: 80px
+            font-family: 'Raleway', sans-serif;
+            color: #ccc;
+            font-size: 32px;
+            font-weight: 800;
+        }
+
+        .jumbotron .btn-primary {
+            background: #3A6BF2;
+            border-color: #3A6BF2;
+        }
+
+        .jumbotron .btn-primary:hover {
+            background: #3A6BF2;
+        }
+
+        .jumbotron p {
+            color: #ccc;
+            font-weight: 700;
+            max-width: 85%;
+            margin: 1em auto 2em
+        }
+
+        .navbar+.jumbotron {
+            margin-top: -20px
+        }
+
+
+        .jumbotron .bone{
+            max-width: 100%
+        }
+        a {
+          font-family: 'Raleway', sans-serif;
+          font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-static-top navbar-inverse">
+      <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">
+        <span><img alt="Brand" src="/static/bone.png" height="30" width="42"></span> KenBoneTech
+      </a>
+    </div>
+        <div class="container">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="/"><span class="glyphicon glyphicon-home"></span>Home</a>
+                </li>
+                <li>
+                    <a href="/names"><span class="glyphicon glyphicon-user"></span>Names</a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="glyphicon glyphicon-info-sign"></span>Flagged<span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="/flagged">EMAILS FLAGGED</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="navbar-right">
+                    <a href="/contact"><span class="glyphicon glyphicon-book"></span> Contact Ken Bone Tech.</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    {% block content %}{% endblock %}
+
+</body>
+
+</html>

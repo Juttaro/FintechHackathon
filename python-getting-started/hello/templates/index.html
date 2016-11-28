@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+
+<div class="jumbotron text-center">
+  <div class="container">
+    <a href="/" class="bone">
+    </a>
+    <h1>Predictive Analytics & Alerts on Privileged Email Communication</h1>
+    <p>A tool that scans all outgoing email communication and emails from a domain or set of domains that mention clients that are indicated as privileged.</p>
+    <p>
+      Tool learns from flagged emails and can predictively flag potential issues w/out the need for admin. listing of specific names.
+    </p>
+    <a type="button" class="btn btn-lg btn-default" href="/flagged"><span class="glyphicon glyphicon-flash"></span> Emails Flagged</a>
+    <a type="button" class="btn btn-lg btn-primary" href="https://github.com/jessefeinman/FintechHackathon"><span class="glyphicon glyphicon-download"></span> Source on GitHub</a>
+  </div>
+</div>
+<div class="container">
+  <div class="alert alert-info text-center" role="alert">
+    This project is a Fintech Hackathon sponsered by RBC Capital Markets, check out the<a href="http://www.zahncenternyc.com/" class="alert-link"> Zahn Innovation Center Here</a>.
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-md-6">
+      <h3><span class="glyphicon glyphicon-info-sign"></span> How Does This Email Flag App Works</h3>
+      <ul>
+        <li>This app was deployed to Heroku, using Git and can be found <a href="https://github.com/jessefeinman/FintechHackathon">Here</a></li>
+
+        <li>We assume that we are receiving emails from a domain to parse and check whether or not they will be flagged based on specific information</li>
+        <li>After cleaning up the source code for the emails, we parse through the emails to look for potential flags</li>
+        <li>After flagging the emails based on email address, names and the content or subject of the email we extract the flagged and not flagged emails into a seperate folder</li>
+          <li>The Pages in the navigation bars will show the names of the flagged emails and details also the machine learning progress</li>
+      </ul>
+    </div>
+    <div class="col-md-6">
+      <h3><span class="glyphicon glyphicon-link"></span> Next Steps</h3>
+      <ul>
+        <li>For more information on this project, visit the github or contact us!</li>
+        <li>If you would like to use our application you can enter the following command line in your terminal</li>
+        <ul>
+          <li><code>git clone https://github.com/jessefeinman/FintechHackathon.git</code> - this will create a local copy of the source code for the app</li>
+          <li><code>cd python-getting-started</code> - change directory into the local source code repository</li>
+          <li><code>heroku git:remote -a &lt;FintechHackathon></code> - associate the Heroku app with the repository</li>
+        </ul>
+      </ul>
+</div>
+{% endblock %}

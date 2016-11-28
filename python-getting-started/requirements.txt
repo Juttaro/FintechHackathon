@@ -1,0 +1,14 @@
+dj-database-url==0.4.0
+Django==1.9.2
+gunicorn==19.4.5
+whitenoise==2.0.6
+scikit-learn==0.18.rc2
+nltk==3.2.1
+sendgrid==3.6.0
+psycopg2==2.6.1
+flask-mail==0.9.1
+<<<<<<< HEAD
+flask==0.11.1
+=======
+flask==0.11.1
+>>>>>>> a61a4acc23fce8fade2e65b63cba821e997b1deb
